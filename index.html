@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Profile Analysis</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Profile Analysis study</h1>
+        <p>This is a result of a hands on project based on research on the internet</p>
+        <p class="view"><a href="https://github.com/leon-czarlinski/ProfileAnalysis/" target="_blank">View the Project on GitHub</a></p>
+        <ul>
+          <li><a href="https://www.kaggle.com/datasets/datascientistanna/customers-dataset" target="_blank">Download <strong>CSV file</strong></a></li>
+          <li><a href="https://github.com/leon-czarlinski/ProfileAnalysis/" target="_blank">Fork On <strong>GitHub</strong></a></li>
+          <li><a href="https://leon-czarlinski.github.io/">Return to <strong>Home Page</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h2>About the project</h2>
+
+        <p>This is a hands-on project about profiles for different types of customers.</p>
+        <p>In this project we will cover the concept of <strong>clustering</strong>, which is a unsupervised learning algorithm that involves grouping similar data points togethes based on their characteristics. The goal of clustering is to find similarities within a dataset and group similar data points together while keeping dissimilar data points separate.</p>
+        <p>Think of this project from a business perspective. Based on the customer profile, the business can identify different clusters and customize the experience, offers, services, products, and others based on this clusterization.</p>
+
+        <h2>Data Analytics Methodology</h2>
+
+        <p>Transforming data into insights: the six steps of data analytics include: <strong>ask, prepare, process, analyze, share, and act</strong>.</p>
+        <img src="./images/data_analysis_process.png" alt="visualization of the methodology of transforming data into insights">
+
+        <p><em>picture by google</em></p>
+
+        <p>On this project, I won't cover all the steps, but the ideia is to show how Google sees the process to transform data into insights.</p>
+        <p>We will focus on asking, preparing, processing, and analyzing the data, based on a given data set, available on <a href="https://www.kaggle.com/datasets/datascientistanna/customers-dataset" target="_blank">Kaggle</a>.</p>
+
+        <h2>Tasks in this project</h2>
+
+        <ol>
+          <li>Understand the problem statement</li>
+          <li>Import libraries and data sets</li>
+          <li>Clean the data, treating missing data</li>
+          <li>Perform exploratory analysis</li>
+          <li>Perform data visualization</li>
+          <li>Principal Component Analysis</li>
+          <li>K-Means Clustering</li>
+        </ol>
+
+        <h2>Data Source</h2>
+
+        <p>For this project we will be using a data set called <strong>Shop Customer Data</strong>, available on <a href="https://www.kaggle.com/datasets/datascientistanna/customers-dataset" target="_blank">Kaggle</a>.</p>
+        <p>This is a structured data set, meaning that data it's organized in a certain format, such as rows and columns.</p>
+        <p>The data set includes 2,000 records and 8 columns, providing information about the shop's customer base. Each column represents a specific aspect of the customer's profile, including their <strong>customer id, gender, age, annual income in $, spending score, profession, work experience and family size</strong>. Let's dive deep into each feature:</p>
+        <ol>
+          <li><strong>Customer ID</strong>: Unique identifier assigned to each customer in the dataset.</li>
+          <li><strong>Gender</strong>: The gender of the customer, either male or female.</li>
+          <li><strong>Age</strong>: The age of the customer, measured in years.</li>
+          <li><strong>Annual income</strong>: The annual income of the customer, measured in a currency. In this dataset there is no currency especification.</li>
+          <li><strong>Spending Score</strong>: A score assigned by the business based on the customer's behavior and spending nature. It goes from 0 to 100.</li>
+          <li><strong>Profession</strong>: The occupation of the customer.</li>
+          <li><strong>Work Experience</strong>: The number of years of work experience of the customer.</li> 
+          <li><strong>Family size</strong>: The size of the customer's family, measured in terms of the number of family. The min is 1, meaning the person is single.</li> 
+        </ol>
+        
+        
+        <h2>Code Source</h2>
+
+        <p>To develop the analysis, I used the Colab notebook available on <strong>GitHub</strong>.
+        <a href="https://github.com/leon-czarlinski/ProfileAnalysis/blob/main/ProfileAnalysis.ipynb" target="_blank">Click here </a>to access the file and see the results.</p>
+
+        <p>Check some of the libraries used to develop the analysis</p>
+
+        <pre><code>
+import pandas as pd #used for data frame manipulation
+import numpy as np #used for numerical analysis
+import seaborn as sns #used for data visualization
+import matplotlib.pyplot as plt #used for data visualization
+import warnings
+warnings.filterwarnings("ignore")
+        </code></pre>
+
+        <h2>Enjoy the content!</h2>
+      </section>
+      <footer>
+        <p><small>Theme by <a href="https://github.com/orderedlist">orderedlist</a> &mdash; Hosted on GitHub Pages </small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+  </body>
+</html>
