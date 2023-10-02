@@ -15,7 +15,7 @@ Think of this project from a business perspective. Based on the customer profile
 1. **Share**: share the results with stakeholders involved in the project.
 1. **Act**: The last stage of the process where the team of analysts work with stakeholders within their company and decide how best to implement suggestions and actions based on their fidings. 
 
-On this project, I won't cover all the steps, but the ideia is to show how Google sees the process to transform data into insights. We will focus on asking, preparing, processing, and analyzing the data, based on a given data set, available on [Kaggle](https://www.kaggle.com/datasets/datascientistanna/customers-dataset) 
+On this project, I won't cover all the steps, but the ideia is to show how Google sees the process to transform data into insights. We will focus on asking, preparing, processing, and analyzing the data, based on a given data set, available on [Kaggle]([https://www.kaggle.com/datasets/datascientistanna/customers-dataset](https://www.kaggle.com/datasets/yashkmd/credit-profile-two-wheeler-loan-dataset) 
 
 ## Tasks in this project
 
@@ -32,14 +32,21 @@ For this project we will be using a data set called **Shop Customer Data** avail
 
 The data set includes 2,000 records and 8 columns, providing information about the shop's customer base. Each column represents a specific aspect of the customer's profile, including their **customer id, gender, age, annual income in $, spending score, profession, work experience and family size**. Let's dive deep into each feature:
 
-1. **Customer ID**: Unique identifier assigned to each customer in the dataset.
-1. **Gender**: The gender of the customer, either male or female. 
-1. **Age**: The age of the customer, measured in years.
-1. **Annual income**: The annual income of the customer, measured in a currency. In this dataset there is no currency especification.
-1. **Spending Score**: A score assigned by the business based on the customer's behavior and spending nature. It goes from 0 to 100.
-1. **Profession**: The occupation of the customer. 
-1. **Work Experience**: The number of years of work experience of the customer. 
-1. **Family size**: The size of the customer's family, measured in terms of the number of family. The min is 1, meaning the person is single. 
+1. Age: Represents the age of the applicant. Indicates the applicant's maturity level (from 18 to 70).
+1. Gender: Gender of the applicant (Male, Female, Other).
+1. Income: The applicant's income, which is critical in assessing their ability to repay the loan (multiples of 1000's).
+1. Credit Score: A score quantifying the applicant's creditworthiness based on their credit history (from 300 to 850).
+1. Credit History Length: Represents the number of months since the applicant's first credit line. Indicates the applicant's experience with credit management (in Months).
+1. Number of Existing Loans: The number of loans the applicant currently has (from 0 to 10).
+1. Loan Amount:The amount of money the applicant is requesting (from 0 to 150,000).
+1. Loan Tenure: The number of months the applicant wants to repay the loan over (in Months).
+1. Existing Customer:Whether the applicant is an existing customer of the finance company (Yes, No).
+1. State: The state in India where the applicant resides
+1. City: The city or village in India where the applicant resides.
+1. LTV Ratio: The loan-to-value ratio, represents the ratio of the loan amount to the appraised value of the asset (typically a house). Higher LTVs can indicate higher risk. (from 40% to 95%)
+1. Employment Profile: General employment category of the applicant (Salaried, Self-Employed, Freelancer, Unemployed, Student).
+1. Occupation: Specific occupation or job title of the applicant.
+1. Profile Score: A score ranging from 0 to 100 represents the overall profile of the applicant based on the actual loan repayment data. Higher values indicate better profiles (from 0 to 100). 
 
 ## Code Souce
 To develop the analysis, I used the Colab notebook available on **GitHub**. [Click here](https://github.com/leon-czarlinski/ProfileAnalysis/blob/main/ProfileAnalysis.ipynb) to access the file and see the results. Feel free to fork the repository and build your own analysis. 
