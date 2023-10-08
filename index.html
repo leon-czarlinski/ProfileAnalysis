@@ -83,7 +83,7 @@
                         <section class="mb-5">
                             <p class="fs-6 mb-4">In this project we will cover the concept of clustering, which is a unsupervised learning algorithm that involves grouping similar data points together based on their characteristics. The goal of clustering is to find similarities within a dataset and group similar data points together while keeping dissimilar data points separate.</p>
                             <p class="fs-6 mb-4">Think of this project from a business perspective. Based on the customer profile, the business can identify different clusters and customize the experience, offers, services, products, and others based on this clusterization.</p>
-                            <p class="fs-6 mb-4">To check the analysis on GitHub, <a href="https://github.com/leon-czarlinski/ProfileAnalysis/blob/main/ProfileAnalysis.ipynb">click here</a>. Below, I explain a little bit about the <strong>Data analytics methodology, tasks involved in the project, data and code source, and the conclusions.</strong></strong></a></p>
+                            <p class="fs-6 mb-4">To check the analysis on Kaggle, <a href="https://www.kaggle.com/code/leonczarlinski/clustering-k-means-and-dbscan/notebook">click here</a>. Below, I explain a little bit about the <strong>Data analytics methodology, tasks involved in the project, data and code source, and the conclusions.</strong></strong></a></p>
                             <h3 class="fw-bolder mb-4 mt-5">Data Analytics Methodology</h3>
                             <p class="fs-6 mb-4">Transforming data into insights: the six steps of data analytics include: <strong>ask, prepare, process, analyze, share, and act</strong>.</p>
                             <figure class="mb-4"><img class="img-fluid rounded" src="./images/data_analysis_process.png" alt="visualization of the 6 steps methodology of transforming data into insights" /></figure>
@@ -93,16 +93,14 @@
                             <ol class="fs-6 mb-4">
                               <li class="fs-6 mb-1">Understand the problem statement</li>
                               <li class="fs-6 mb-1">Import libraries and data sets</li>
-                              <li class="fs-6 mb-1">Clean the data, treating missing data</li>
-                              <li class="fs-6 mb-1">Perform exploratory analysis</li>
-                              <li class="fs-6 mb-1">Perform data visualization</li>
-                              <li class="fs-6 mb-1">K-Means Clustering</li>
-                              <li class="fs-6 mb-1">Dendrogram clustering</li>
+                              <li class="fs-6 mb-1">Perform exploratory analysis and data visualization</li>
+                              <li class="fs-6 mb-1">Clustering with K-MEANS and DBSCAN</li>
+                              <li class="fs-6 mb-1">Conclusions</li>
                             </ol>
                            
                             <h3 clas="fw-bolder mb-4 mt-5">Data source</h3>
-                            <p class="fs-6 mb-4">For this project we will be using a dataset called "Credit Profile" available at kaggle. <a href="https://www.kaggle.com/datasets/yashkmd/credit-profile-two-wheeler-loan-dataset" target="_blank">Click here</a> to access.
-                            <p class="fs-6 mb-4">The dataset provides a comprehensive overview of potential loan applicants' profiles, specifically tailored for the Indian demographic. There are 15 features that are available:</p>
+                            <p class="fs-6 mb-4">For this project we will be using a dataset called "Mall Customer Segmentation Data" available at kaggle. <a href="https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python/data" target="_blank">Click here</a> to access.
+                            <p class="fs-6 mb-4">This data set is created only for the learning purpose of the customer segmentation concepts , also known as market basket analysis. There are 5 features that are available:</p>
                             <table class="table table-striped mb-5">
                               <thead>
                                 <tr>
@@ -113,9 +111,9 @@
                               </thead>
                               <tbody>
                                 <tr>
-                                  <th scope="row">Age</th>
+                                  <th scope="row">Customer ID</th>
                                   <td>Integer</td>
-                                  <td>Represents the age of the applicant</td>
+                                  <td>Unique ID assigned to the customer</td>
                                 </tr>
                                 <tr>
                                   <th scope="row">Gender</th>
@@ -123,69 +121,19 @@
                                   <td>Gender of the applicant</td>
                                 </tr>
                                 <tr>
-                                  <th scope="row">Income</th>
+                                  <th scope="row">Age</th>
                                   <td>Integer</td>
-                                  <td>The applicant's income, which is critical in assessing their ability to repay the loan</td>
+                                  <td>Age of the customer</td>
                                 </tr>
                                 <tr>
-                                  <th scope="row">Credit Score</th>
+                                  <th scope="row">Annual Income (k$)</th>
                                   <td>Integer</td>
-                                  <td>A score quantifying the applicant's creditworthiness based on their credit history (300 to 850)</td>
+                                  <td>Annual Income of the customer</td>
                                 </tr>
                                 <tr>
-                                  <th scope="row">Credit History Length</th>
+                                  <th scope="row">Spending Score</th>
                                   <td>Integer</td>
-                                  <td>Represents the number of months since the applicant's first credit line</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">Number of Existing Loans</th>
-                                  <td>Integer</td>
-                                  <td>The number of loans the applicant currently has</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">Loan Amount</th>
-                                  <td>Integer</td>
-                                  <td>The amount of money the applicant is requesting</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">Loan Tenure</th>
-                                  <td>Integer</td>
-                                  <td>The number of months the applicant wants to repay the loan over</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">Existing Customer</th>
-                                  <td>Categorical</td>
-                                  <td>Whether the applicant is an existing customer of the finance company</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">State</th>
-                                  <td>Categorical</td>
-                                  <td>The state in India where the applicant resides</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">City</th>
-                                  <td>Categorical</td>
-                                  <td>The city or village in India where the applicant resides</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">LTV Ratio</th>
-                                  <td>Float</td>
-                                  <td>The loan-to-value ratio, represents the ratio of the loan amount to the appraised value of the asset</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">Employment Profile</th>
-                                  <td>Categorical</td>
-                                  <td>General employment category of the applicant (Salaried, Self-Employed, Freelancer, Unemployed, Student)</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">Occupation</th>
-                                  <td>Categorical</td>
-                                  <td>Specific occupation or job title of the applicant</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">Profile Score</th>
-                                  <td>Integer</td>
-                                  <td>Represents the overall profile of the applicant based on the actual loan repayment data</td>
+                                  <td>Score assigned by the mall based on customer behavior and spending nature (1-100)</td>
                                 </tr>
                               </tbody>
                             </table>
@@ -195,30 +143,29 @@
                               <a href="https://github.com/leon-czarlinski/ProfileAnalysis/blob/main/ProfileAnalysis.ipynb" target="_blank">Click here </a>to access the file and see the results.</p>
                             
                             <div class="text-bg-light">
-                            <pre><code class="python">
+                              <pre><code class="python">
   #Data
   import pandas as pd
   import numpy as np
-                                
+  
   #Data Visualization
-  import seaborn as sns
-  import matplotlib.pyplot as plt
-
-  #Data preprocessing
-  from sklearn.preprocessing import LabelEncoder
-  from sklearn.preprocessing import StandardScaler
-  from sklearn.model_selection import train_test_split
-                                
+  import matplotlib as plt
+  from matplotlib import style
+  
   #Clustering Models
-  from sklearn.cluster import KMeans
-  from sklearn.cluster import AgglomerativeClustering
-  from sklearn.metrics import silhouette_score
-  from sklearn.metrics import calinski_harabasz_score
-                                
+  import seaborn as sns
+  from sklearn.cluster import DBSCAN, KMeans
+  
   #Ignore Warnings
   import warnings
-  warnings.filterwarnings("ignore")
-                            </code></pre>
+  warnings.filterwarnings('ignore')
+  
+  #cd to directory with file
+  import os
+  for dirname, _, filenames in os.walk('/kaggle/input'):
+      for filename in filenames:
+          print(os.path.join(dirname, filename))
+                              </code></pre>
                           </div>
                               
                         <div class="container"><p class="float-end"><a href="#">Back to top</a></p></div>
@@ -235,8 +182,8 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <ul class="list-unstyled mb-0">
-                                        <li><a href="https://github.com/leon-czarlinski/ProfileAnalysis/blob/main/ProfileAnalysis.ipynb" target="_blank"><strong>Code source</strong></a></li>
-                                        <li><a href="https://www.kaggle.com/datasets/yashkmd/credit-profile-two-wheeler-loan-dataset" target="_blank"><strong>Data source</strong></a></li>
+                                        <li><a href="https://www.kaggle.com/code/leonczarlinski/clustering-k-means-and-dbscan/notebook" target="_blank"><strong>Code source</strong></a></li>
+                                        <li><a href="https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python/data" target="_blank"><strong>Data source</strong></a></li>
                                         <li><a href="https://github.com/leon-czarlinski/ProfileAnalysis" target="_blank"><strong>GitHub repository</strong></a></li>
                                     </ul>
                                 </div>
